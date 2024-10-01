@@ -1,9 +1,9 @@
-<div class="flex">
+<div class="flex h-screen overflow-y-hidden">
   <!-- Sidebar -->
   <app-sidebar></app-sidebar>
 
   <!-- Main Content -->
-  <div class="flex-1">
+  <div class="flex-1 overflow-y-auto">
     <app-navbar></app-navbar>
     <div class="p-4">
       <div class="p-8">
@@ -48,6 +48,15 @@
               <p class="text-gray-600">Total Transaction</p>
               <p class="text-gray-400">Month to Date</p>
             </div>
+          </div>
+        </div>
+        <br>
+        <div class="flex space-x-4">
+          <div>
+            <app-issung-bank></app-issung-bank>
+          </div>
+          <div>
+            <app-payment-type></app-payment-type>
           </div>
         </div>
       </div>
