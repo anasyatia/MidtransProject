@@ -14,13 +14,4 @@ import { TransactionSearchModalComponent } from './modal/transaction-search-moda
 })
 export class NavbarComponent {
   constructor(private router: Router) {}
-  isSearchOpened = false;
-
-  openSearch() {
-    this.isSearchOpened = true;
-  }
-
-  closeSearch() {
-    this.isSearchOpened = false;
-  }
 }
