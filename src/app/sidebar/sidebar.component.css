@@ -6,4 +6,7 @@ ul {
     display: flex;
     align-items: center;
   }
-  
+
+  .font-nova-slim {
+    font-family: 'Nova Slim', sans-serif;
+  }

@@ -14,11 +14,19 @@
           Settlement Date
           <span class="material-symbols-outlined">keyboard_arrow_down</span>
         </button>
-        <div *ngIf="sections.settlementDate" class="pl-4 mt-2">
-          <p class="text-gray-500 mb-2">From</p>
-          <input type="date" [(ngModel)]="settlementDate.from" class="border border-gray-300 p-2 rounded w-full">
-          <p class="text-gray-500 mb-2 mt-2">To</p>
-          <input type="date" [(ngModel)]="settlementDate.to" class="border border-gray-300 p-2 rounded w-full">
+        <div *ngIf="sections.settlementDate" class="flex flex-col items-center max-w-md mx-auto mt-8">
+          <div class="relative w-full">
+            <input
+              id="startDate"
+              type="date"
+              class="w-1/2 px-4 py-2 border border-r-0 border-gray-300 rounded-l-md focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+            />
+            <input
+              id="endDate"
+              type="date"
+              class="w-1/2 px-4 py-2 border border-l-0 border-gray-300 rounded-r-md focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+            />
+          </div>
         </div>
       </div>
 
@@ -28,10 +36,18 @@
           <span class="material-symbols-outlined">keyboard_arrow_down</span>
         </button>
         <div *ngIf="sections.disbursementDate" class="pl-4 mt-2">
-          <p class="text-gray-500 mb-2">From</p>
-          <input type="date" [(ngModel)]="disbursementDate.from" class="border border-gray-300 p-2 rounded w-full">
-          <p class="text-gray-500 mb-2 mt-2">To</p>
-          <input type="date" [(ngModel)]="disbursementDate.to" class="border border-gray-300 p-2 rounded w-full">
+          <div class="relative w-full">
+            <input
+              id="startDate"
+              type="date"
+              class="w-1/2 px-4 py-2 border border-r-0 border-gray-300 rounded-l-md focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+            />
+            <input
+              id="endDate"
+              type="date"
+              class="w-1/2 px-4 py-2 border border-l-0 border-gray-300 rounded-r-md focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+            />
+          </div>
         </div>
       </div>
 
@@ -41,10 +57,18 @@
           <span class="material-symbols-outlined">keyboard_arrow_down</span>
         </button>
         <div *ngIf="sections.refundDate" class="pl-4 mt-2">
-          <p class="text-gray-500 mb-2">From</p>
-          <input type="date" [(ngModel)]="refundDate.from" class="border border-gray-300 p-2 rounded w-full">
-          <p class="text-gray-500 mb-2 mt-2">To</p>
-          <input type="date" [(ngModel)]="refundDate.to" class="border border-gray-300 p-2 rounded w-full">
+          <div class="relative w-full">
+            <input
+              id="startDate"
+              type="date"
+              class="w-1/2 px-4 py-2 border border-r-0 border-gray-300 rounded-l-md focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+            />
+            <input
+              id="endDate"
+              type="date"
+              class="w-1/2 px-4 py-2 border border-l-0 border-gray-300 rounded-r-md focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+            />
+          </div>
         </div>
       </div>
 
@@ -88,9 +112,9 @@
           Source
           <span class="material-symbols-outlined">keyboard_arrow_down</span>
         </button>
-        <div *ngIf="sections.source" class="pl-4 mt-2">
+        <div *ngIf="sections.source" class="pl-4 mt-2" >
           <p class="text-gray-500 mb-2">Payment Source</p>
-          <select class="border border-gray-300 p-2 rounded w-full">
+          <select class="border border-gray-300 p-2 rounded w-full" placeholder="Payment Source">
             <option value="Core API">Core API</option>
             <option value="SNAP">SNAP</option>
             <option value="Payment link">Payment link</option>
