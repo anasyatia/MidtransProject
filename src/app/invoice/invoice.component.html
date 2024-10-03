@@ -1,0 +1,75 @@
+<div class="flex">
+    <!-- Sidebar -->
+    <app-sidebar></app-sidebar>
+  
+    <!-- Main Content -->
+    <div class="flex-1 bg-gray-50">
+    <app-navbar></app-navbar>
+    <div class="flex flex-col p-8 min-screen">
+        <!-- Header Section -->
+        <div class="bg-white rounded-lg shadow p-6">
+        <div class="flex justify-between items-center mb-6">
+        <h1 class="text-2xl font-semibold text-gray-700">Invoices</h1>
+        <div class="flex items-center space-x-4 relative">
+            <!-- More Info Dropdown -->
+            <div class="relative">
+            <button
+                class="btn btn-secondary flex items-center px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300"
+                (click)="toggleDropdown()"
+            >
+                More info
+            </button>
+            <div
+                *ngIf="isDropdownOpen"
+                class="absolute right-0 mt-2 w-48 bg-white border rounded shadow-md"
+            >
+                <ul class="py-1">
+                <li
+                    (click)="handleSelection('Invoicing Tutorial')"
+                    class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
+                >
+                    Invoicing Tutorial
+                </li>
+                <li
+                    (click)="handleSelection('Invoice Financing')"
+                    class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
+                >
+                    Invoice Financing
+                </li>
+                <li
+                    (click)="handleSelection('Invoicing FAQ')"
+                    class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
+                >
+                    Invoicing FAQ
+                </li>
+                </ul>
+            </div>
+            </div>
+            <button class="btn btn-secondary flex items-center px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300">
+            Settings
+            </button>
+            <button class="btn btn-secondary flex items-center px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300">
+            Filter
+            </button>
+            <button class="btn btn-secondary flex items-center px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300">
+            Export CSV
+            </button>
+            <button class="btn btn-primary px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+            Create invoice
+            </button>
+        </div>
+        </div>
+    
+        <!-- Content Section -->
+        <div class="flex flex-col items-center justify-center">
+        <!-- <img src="assets/images/empty-box.png" alt="Empty Data" class="w-40 h-40 mb-6"> -->
+        <h2 class="text-lg font-semibold text-gray-800 mb-2">Data not found</h2>
+        <p class="text-gray-600 text-center">
+            There's no record on the information you're looking for.<br />
+            Try applying other filters or search other data.
+        </p>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>

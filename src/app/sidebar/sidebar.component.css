@@ -1,9 +1,7 @@
-ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  li {
-    display: flex;
-    align-items: center;
-  }
-  
+.sidebar {
+  transition: width 0.3s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
